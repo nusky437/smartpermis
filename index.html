@@ -16,6 +16,68 @@
 
 
 <style>
+
+/* --- Responsive Logo Wrapper --- */
+.logo-wrapper {
+  position: relative;
+  width: clamp(220px, 70vw, 430px); /* responsive scaling */
+  aspect-ratio: 430 / 280; /* keeps same shape */
+}
+
+/* Logo image */
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Wheels (responsive size) */
+.wheel-spin {
+  position: absolute;
+  width: clamp(28px, 8vw, 50px);
+  height: clamp(28px, 8vw, 50px);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  transform-origin: center;
+}
+
+/* Position tuning (scales better now) */
+.wheel-rear {
+  left: 28%;
+  bottom: 18%;
+}
+
+.wheel-front {
+  right: 30%;
+  bottom: 18%;
+}
+
+/* Spin animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Loading text responsive */
+#preloader p {
+  margin-top: 20px;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  font-size: clamp(12px, 3vw, 16px);
+}
+
+/* Small screen extra spacing */
+@media (max-width: 480px) {
+  #preloader {
+    padding: 20px;
+  }
+}
+
+
+
+
+
     /* --- Full Screen Loader Styling --- */
     #preloader {
       position: fixed;
