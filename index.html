@@ -16,68 +16,6 @@
 
 
 <style>
-
-/* --- Responsive Logo Wrapper --- */
-.logo-wrapper {
-  position: relative;
-  width: clamp(220px, 70vw, 430px); /* responsive scaling */
-  aspect-ratio: 430 / 280; /* keeps same shape */
-}
-
-/* Logo image */
-.logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-/* Wheels (responsive size) */
-.wheel-spin {
-  position: absolute;
-  width: clamp(28px, 8vw, 50px);
-  height: clamp(28px, 8vw, 50px);
-  border-radius: 50%;
-  animation: spin 0.6s linear infinite;
-  transform-origin: center;
-}
-
-/* Position tuning (scales better now) */
-.wheel-rear {
-  left: 28%;
-  bottom: 18%;
-}
-
-.wheel-front {
-  right: 30%;
-  bottom: 18%;
-}
-
-/* Spin animation */
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-/* Loading text responsive */
-#preloader p {
-  margin-top: 20px;
-  font-family: sans-serif;
-  letter-spacing: 3px;
-  font-size: clamp(12px, 3vw, 16px);
-}
-
-/* Small screen extra spacing */
-@media (max-width: 480px) {
-  #preloader {
-    padding: 20px;
-  }
-}
-
-
-
-
-
     /* --- Full Screen Loader Styling --- */
     #preloader {
       position: fixed;
@@ -97,8 +35,8 @@
     /* Unga Original Logo Animation Code */
     .logo-wrapper {
       position: relative;
-      width: 430px;
-      height: 280px;
+      width: 370px;
+      height: 220px;
     }
 
     .logo-img {
@@ -116,15 +54,15 @@
     }
 
     .wheel-rear {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       left: 30%;
       bottom: 45%;
     }
 
     .wheel-front {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       right: 33%;
       bottom: 45%;
     }
@@ -353,7 +291,7 @@
                 <p class="sec-p">At our driving school, we're committed to shaping confident, skilled drivers who prioritize safety on the roads. With expert instructors and a comprehensive curriculum, we offer a tailored learning experience.</p>
                 <p class="sec-p">From mastering basic maneuvers to navigating complex traffic situations, we provide the knowledge and hands-on training necessary for lasting success.</p>
                 <div class="about-mini-stats">
-                    <div class="ams"><strong>5+</strong><span>Yrs Experience |</span><strong> 1000+</strong><span> Students |</span><strong> 95%</strong><span> Pass Rate </span></div>
+                    <div class="ams"><strong>5+</strong><span>Yrs Experience |</span><strong> 1000+</strong><span> Students |</span><strong>95%</strong><span> Pass Rate </span></div>
                  
                
                 </div>
