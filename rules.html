@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Rules — Smart Permis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rules.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="sp-header" id="spHeader">
+    <a href="index.html" class="sp-logo"><img src="output-onlinegiftools.gif" alt="Smart Permis"></a>
+    <nav class="sp-nav">
+        <a href="index.html" class="sp-nav-link">Home</a>
+        <a href="about.html" class="sp-nav-link">About</a>
+        <a href="gallery.html" class="sp-nav-link">Gallery</a>
+        <a href="contact.html" class="sp-nav-link">Contact</a>
+        <a href="rules.html" class="sp-nav-link active">Driving rules</a>
+    </nav>
+    <div class="sp-header-right">
+        <a href="tel:+337 510 30 782" class="sp-phone-link">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            +337 510 30 782
+        </a>
+           <a href="info@smartpermis.com" class="sp-email-link">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5L4 8V6l8 5 8-5v2z"/>
+        </svg>
+        info@smartpermis.com
+    </a>
+    </div>
+    <button class="sp-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</header>
+
+<nav class="sp-mobile-nav" id="mobileNav">
+    <a href="index.html" class="sp-nav-link">Home</a>
+    <a href="about.html" class="sp-nav-link">About</a>
+    <a href="gallery.html" class="sp-nav-link">Gallery</a>
+    <a href="contact.html" class="sp-nav-link">Contact</a>
+    <a href="rules.html" class="sp-nav-link active">Driving rules</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="ph">
+    <div class="ph-bg" style="background-image:url('Imgaes/05.png')"></div>
+    <div class="ph-mesh"></div>
+    <div class="ph-grid"></div>
+    <div class="ph-content">
+        <div class="ph-bread"><a href="index.html">Home</a><span>/</span>Driving Rules</div>
+        <h1>France Driving<br>Rules &amp; Regulations</h1>
+        <p>Everything you need to know before hitting the French roads.</p>
+    </div>
+    <div class="ph-wave"></div>
+</section>
+
+<!-- QUICK STATS -->
+<section class="sp-section" style="padding-top:72px; padding-bottom:0;">
+    <div class="container">
+        <div class="rules-intro-stats">
+            <div class="ris-card" data-aos data-aos-delay="60">
+                <div class="ris-icon">🚗</div>
+                <div class="ris-num">130</div>
+                <div class="ris-label">Max Speed km/h on Motorways</div>
+            </div>
+            <div class="ris-card" data-aos data-aos-delay="120">
+                <div class="ris-icon">🍺</div>
+                <div class="ris-num">0.5</div>
+                <div class="ris-label">Max BAC ‰ for Drivers</div>
+            </div>
+            <div class="ris-card" data-aos data-aos-delay="180">
+                <div class="ris-icon">⭐</div>
+                <div class="ris-num">12</div>
+                <div class="ris-label">Starting Licence Points</div>
+            </div>
+            <div class="ris-card" data-aos data-aos-delay="240">
+                <div class="ris-icon">📱</div>
+                <div class="ris-num">€135</div>
+                <div class="ris-label">Fine for Phone Use While Driving</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FILTER BAR -->
+<section class="sp-section" style="padding-top:52px; padding-bottom:0;">
+    <div class="container">
+        <div class="rules-filter-bar" data-aos>
+            <button class="rfb-btn active" onclick="filterRules('all', this)">🗂 All Rules</button>
+            <button class="rfb-btn" onclick="filterRules('speed', this)">🚀 Speed Limits</button>
+            <button class="rfb-btn" onclick="filterRules('alcohol', this)">🍺 Alcohol &amp; Drugs</button>
+            <button class="rfb-btn" onclick="filterRules('priority', this)">🔁 Priority Rules</button>
+            <button class="rfb-btn" onclick="filterRules('equipment', this)">🛠 Equipment</button>
+            <button class="rfb-btn" onclick="filterRules('licence', this)">🪪 Licence &amp; Points</button>
+            <button class="rfb-btn" onclick="filterRules('fines', this)">💶 Fines</button>
+        </div>
+    </div>
+</section>
+
+<!-- MAIN RULES CONTENT -->
+<section class="sp-section" style="padding-top:40px;">
+    <div class="container">
+
+        <!-- SPEED LIMITS -->
+        <div class="rules-section" data-cat="speed">
+            <div class="rules-cat-title" data-aos>
+                <div class="rct-icon">🚀</div>
+                <div class="rct-text">
+                    <h3>Speed Limits</h3>
+                    <span>Vitesses limites autorisées en France</span>
+                </div>
+            </div>
+
+            <div class="rule-alert alert-yellow" data-aos data-aos-delay="60">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-body yellow">
+                    <h5>Rain Reduces Speed Limits</h5>
+                    <p>In wet conditions, speed limits are reduced. Motorways drop from 130 to 110 km/h, dual carriageways from 110 to 100 km/h. Visibility below 50 m: max 50 km/h everywhere.</p>
+                </div>
+            </div>
+
+            <div class="speed-showcase" data-aos data-aos-delay="80">
+                <div class="speed-card">
+                    <div class="speed-sign"><strong>50</strong><small>km/h</small></div>
+                    <h5>Urban Areas</h5>
+                    <span>Inside towns &amp; cities (agglomérations)</span>
+                </div>
+                <div class="speed-card">
+                    <div class="speed-sign"><strong>80</strong><small>km/h</small></div>
+                    <h5>Open Roads</h5>
+                    <span>Two-way roads outside towns without central reservation</span>
+                </div>
+                <div class="speed-card">
+                    <div class="speed-sign"><strong>110</strong><small>km/h</small></div>
+                    <h5>Dual Carriageways</h5>
+                    <span>Roads with central divider, 2×2 lanes</span>
+                </div>
+                <div class="speed-card">
+                    <div class="speed-sign"><strong>130</strong><small>km/h</small></div>
+                    <h5>Motorways</h5>
+                    <span>Autoroutes with two or more lanes each way</span>
+                </div>
+            </div>
+
+            <div class="rules-grid" data-aos data-aos-delay="100">
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">01</div><h4>Speed Zones in Towns</h4></div>
+                    <p>In <strong>Zone 30</strong> areas (school zones, residential), maximum speed is 30 km/h. In <strong>Zones de Rencontre</strong>, limit drops to 20 km/h — pedestrians have absolute priority.</p>
+                    <span class="rule-tag tag-info">Urban Zone</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">02</div><h4>New Drivers (Permis Probatoire)</h4></div>
+                    <p>During the 3-year probationary period, speed limits are reduced: motorways 110 km/h, dual carriageways 100 km/h, open roads 80 km/h. Stricter alcohol limits also apply.</p>
+                    <span class="rule-tag tag-warning">Probationary Drivers</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">03</div><h4>Speed Camera Zones</h4></div>
+                    <p>France has over 4,000 fixed speed cameras and mobile radar units. Camera locations are no longer displayed on GPS apps — radar detector use carries a €1,500 fine and licence suspension.</p>
+                    <span class="rule-tag tag-danger">Enforcement</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rules-divider"></div>
+
+        <!-- ALCOHOL & DRUGS -->
+        <div class="rules-section" data-cat="alcohol">
+            <div class="rules-cat-title" data-aos>
+                <div class="rct-icon">🍺</div>
+                <div class="rct-text">
+                    <h3>Alcohol &amp; Drugs</h3>
+                    <span>Alcool, drogues et conduite</span>
+                </div>
+            </div>
+
+            <div class="rule-alert alert-red" data-aos data-aos-delay="60">
+                <div class="alert-icon">🚫</div>
+                <div class="alert-body red">
+                    <h5>Zero Tolerance for Drugs</h5>
+                    <p>Driving under the influence of illegal drugs — cannabis, cocaine, MDMA, opiates — is a criminal offence in France regardless of quantity. Penalties include up to €4,500 fine, 3 years imprisonment, and full licence suspension.</p>
+                </div>
+            </div>
+
+            <div class="rules-grid" data-aos data-aos-delay="80">
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">01</div><h4>Legal BAC Limit</h4></div>
+                    <p>The legal blood alcohol concentration (BAC) limit is <strong>0.5 g/L</strong> for most drivers. Exceeding this is an offence punishable by a €135 fine and 6 penalty points.</p>
+                    <span class="rule-tag tag-warning">Standard Drivers</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">02</div><h4>Stricter Limit for New Drivers</h4></div>
+                    <p>Drivers within their 3-year probationary period must stay below <strong>0.2 g/L</strong>. Effectively a near-zero tolerance policy to protect inexperienced drivers on French roads.</p>
+                    <span class="rule-tag tag-danger">New Drivers</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">03</div><h4>Professional &amp; Bus Drivers</h4></div>
+                    <p>Drivers of commercial vehicles, buses, or coaches carrying passengers must also remain under <strong>0.2 g/L</strong>. Violation results in immediate suspension and criminal prosecution.</p>
+                    <span class="rule-tag tag-danger">Professional Drivers</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">04</div><h4>Criminal BAC Threshold</h4></div>
+                    <p>A BAC of <strong>0.8 g/L or above</strong> is a criminal offence. Penalties include up to 2 years in prison, a €4,500 fine, and automatic licence suspension with possible vehicle confiscation.</p>
+                    <span class="rule-tag tag-danger">Criminal Offence</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">05</div><h4>Random Breath Tests</h4></div>
+                    <p>Police can conduct <strong>random breathalyser tests</strong> at any time. Refusing a test is treated as a positive result and carries the same heavy penalties as drunk driving.</p>
+                    <span class="rule-tag tag-info">Police Powers</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">06</div><h4>Breathalyser Kit</h4></div>
+                    <p>Drivers are recommended to carry a <strong>certified NF disposable breathalyser kit</strong> inside the vehicle for voluntary self-testing before driving.</p>
+                    <span class="rule-tag tag-info">Recommended</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rules-divider"></div>
+
+        <!-- PRIORITY RULES -->
+        <div class="rules-section" data-cat="priority">
+            <div class="rules-cat-title" data-aos>
+                <div class="rct-icon">🔁</div>
+                <div class="rct-text">
+                    <h3>Priority Rules</h3>
+                    <span>Règles de priorité sur les routes françaises</span>
+                </div>
+            </div>
+
+            <div class="rule-alert alert-blue" data-aos data-aos-delay="60">
+                <div class="alert-icon">ℹ️</div>
+                <div class="alert-body blue">
+                    <h5>Priorité à Droite — France's Famous Rule</h5>
+                    <p>"Priority to the right" is the default rule in France unless signs indicate otherwise. At unmarked intersections, always give way to any vehicle approaching from your RIGHT — even from a small side street.</p>
+                </div>
+            </div>
+
+            <div class="signs-grid" data-aos data-aos-delay="80">
+                <div class="sign-card">
+                    <svg class="sign-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="30,4 56,30 30,56 4,30" fill="#f5f5f5" stroke="#e8001d" stroke-width="3"/>
+                        <polygon points="30,12 48,30 30,48 12,30" fill="white" stroke="#e8001d" stroke-width="2.5"/>
+                        <polygon points="30,18 42,30 30,42 18,30" fill="#e8001d"/>
+                    </svg>
+                    <h5>Priority Road</h5>
+                    <p>You have priority over all vehicles joining the road</p>
+                </div>
+                <div class="sign-card">
+                    <svg class="sign-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="30,52 4,10 56,10" fill="white" stroke="#e8001d" stroke-width="3"/>
+                        <polygon points="30,44 10,15 50,15" fill="#e8001d"/>
+                        <text x="30" y="36" text-anchor="middle" font-size="12" font-weight="900" fill="white" font-family="sans-serif">!</text>
+                    </svg>
+                    <h5>Give Way</h5>
+                    <p>Slow down and yield to all traffic on the main road</p>
+                </div>
+                <div class="sign-card">
+                    <svg class="sign-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="20,4 40,4 56,20 56,40 40,56 20,56 4,40 4,20" fill="#e8001d" stroke="#c00018" stroke-width="1.5"/>
+                        <text x="30" y="36" text-anchor="middle" font-size="11" font-weight="900" fill="white" font-family="sans-serif">STOP</text>
+                    </svg>
+                    <h5>Stop (Arrêt absolu)</h5>
+                    <p>Full stop required — even if the road appears clear</p>
+                </div>
+                <div class="sign-card">
+                    <svg class="sign-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="24" fill="#f5f5f5" stroke="#e8001d" stroke-width="3"/>
+                        <circle cx="30" cy="30" r="10" fill="#e8001d"/>
+                        <path d="M30,10 A20,20 0 0,1 50,30" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round"/>
+                        <polygon points="50,26 50,34 56,30" fill="#1d4ed8"/>
+                    </svg>
+                    <h5>Roundabout Priority</h5>
+                    <p>Vehicles inside have priority over entering traffic</p>
+                </div>
+            </div>
+
+            <div class="rules-grid" style="margin-top:16px;" data-aos data-aos-delay="100">
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">01</div><h4>Roundabout Rules</h4></div>
+                    <p>Since 1983, vehicles <strong>inside the roundabout have priority</strong>. Drivers entering must give way. Look for the "Vous n'avez pas la priorité" sign at modern roundabout entries.</p>
+                    <span class="rule-tag tag-info">Roundabout</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">02</div><h4>Emergency Vehicles</h4></div>
+                    <p>Police, fire, ambulance, and gendarmerie with sirens/lights always have absolute priority. Pull to the right and stop immediately. Never block intersections or emergency lanes.</p>
+                    <span class="rule-tag tag-danger">Always Priority</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">03</div><h4>Pedestrian Crossings</h4></div>
+                    <p>Pedestrians who have stepped onto a crossing have absolute priority. Drivers must stop and wait. Failure to yield is a €135 fine and loss of 6 points from your licence.</p>
+                    <span class="rule-tag tag-success">Pedestrian Safety</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rules-divider"></div>
+
+        <!-- MANDATORY EQUIPMENT -->
+        <div class="rules-section" data-cat="equipment">
+            <div class="rules-cat-title" data-aos>
+                <div class="rct-icon">🛠</div>
+                <div class="rct-text">
+                    <h3>Mandatory Equipment</h3>
+                    <span>Équipements obligatoires dans le véhicule</span>
+                </div>
+            </div>
+
+            <div class="rule-alert alert-green" data-aos data-aos-delay="60">
+                <div class="alert-icon">✅</div>
+                <div class="alert-body green">
+                    <h5>Always Carry These in Your Car</h5>
+                    <p>French law requires specific safety equipment in every vehicle. Missing items can result in on-the-spot fines during police checks, even if you are not involved in an accident.</p>
+                </div>
+            </div>
+
+            <div class="rules-grid" data-aos data-aos-delay="80">
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">01</div><h4>Warning Triangle</h4></div>
+                    <p>A <strong>red reflective warning triangle</strong> is mandatory. In a breakdown, place it 30 metres behind the vehicle on standard roads, further on motorways for visibility.</p>
+                    <span class="rule-tag tag-danger">Mandatory</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">02</div><h4>High-Visibility Vest</h4></div>
+                    <p>A <strong>fluorescent safety vest (gilet jaune)</strong> must be kept inside the passenger compartment — not the boot. Every person who exits the vehicle in a breakdown must wear it.</p>
+                    <span class="rule-tag tag-danger">Mandatory</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">03</div><h4>Fire Extinguisher</h4></div>
+                    <p>Not legally required for private cars but strongly recommended. It <strong>is mandatory</strong> for commercial vehicles, buses, and vehicles carrying dangerous goods (ADR transport).</p>
+                    <span class="rule-tag tag-warning">Recommended</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">04</div><h4>Valid Documents</h4></div>
+                    <p>Always carry: <strong>driving licence</strong>, vehicle registration (carte grise), valid insurance certificate (attestation d'assurance), and a valid ID or passport at all times.</p>
+                    <span class="rule-tag tag-danger">Mandatory</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">05</div><h4>Seatbelts &amp; Child Seats</h4></div>
+                    <p>Seatbelts are compulsory for <strong>all passengers</strong> in all seats. Children under 10 must use an approved child restraint. Children under 135 cm must use a booster or child seat.</p>
+                    <span class="rule-tag tag-danger">Mandatory</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">06</div><h4>Crit'Air Vignette</h4></div>
+                    <p>In low-emission zones (ZFE) — Paris, Lyon, Grenoble — a <strong>Crit'Air pollution sticker</strong> is mandatory. Driving without one: fines of €68 (car) to €450 (commercial vehicle).</p>
+                    <span class="rule-tag tag-info">ZFE Zones</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rules-divider"></div>
+
+        <!-- LICENCE & POINTS -->
+        <div class="rules-section" data-cat="licence">
+            <div class="rules-cat-title" data-aos>
+                <div class="rct-icon">🪪</div>
+                <div class="rct-text">
+                    <h3>Licence &amp; Points System</h3>
+                    <span>Le permis à points — système français</span>
+                </div>
+            </div>
+
+            <div class="rule-alert alert-blue" data-aos data-aos-delay="60">
+                <div class="alert-icon">ℹ️</div>
+                <div class="alert-body blue">
+                    <h5>How the Points System Works</h5>
+                    <p>France uses a <strong>penalty point system (permis à points)</strong>. New drivers start with 6 points. After 3 years without serious offences, the licence reaches its full 12 points. Lose all points and your licence is invalidated — you must redo the full test.</p>
+                </div>
+            </div>
+
+            <div class="points-track" data-aos data-aos-delay="80">
+                <h4>Points Lost Per Offence</h4>
+                <div class="points-bar-wrap">
+                    <span class="points-label">Phone Use While Driving</span>
+                    <div class="points-bar-bg"><div class="points-bar-fill" style="width:50%"></div></div>
+                    <span class="points-val">−6 pts</span>
+                </div>
+                <div class="points-bar-wrap">
+                    <span class="points-label">BAC 0.5–0.8 g/L</span>
+                    <div class="points-bar-bg"><div class="points-bar-fill" style="width:50%"></div></div>
+                    <span class="points-val">−6 pts</span>
+                </div>
+                <div class="points-bar-wrap">
+                    <span class="points-label">Running Red Light</span>
+                    <div class="points-bar-bg"><div class="points-bar-fill" style="width:33%"></div></div>
+                    <span class="points-val">−4 pts</span>
+                </div>
+                <div class="points-bar-wrap">
+                    <span class="points-label">No Seatbelt</span>
+                    <div class="points-bar-bg"><div class="points-bar-fill" style="width:25%"></div></div>
+                    <span class="points-val">−3 pts</span>
+                </div>
+                <div class="points-bar-wrap">
+                    <span class="points-label">Speeding 20–30 km/h over</span>
+                    <div class="points-bar-bg"><div class="points-bar-fill" style="width:25%"></div></div>
+                    <span class="points-val">−3 pts</span>
+                </div>
+                <div class="points-bar-wrap">
+                    <span class="points-label">Speeding 1–19 km/h over</span>
+                    <div class="points-bar-bg"><div class="points-bar-fill" style="width:8%"></div></div>
+                    <span class="points-val">−1 pt</span>
+                </div>
+            </div>
+
+            <div class="rules-grid" data-aos data-aos-delay="100">
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">01</div><h4>Regaining Points</h4></div>
+                    <p>You automatically regain points if you commit no offences: 1 point per year (up to max 12). Attend a <strong>voluntary road safety awareness course</strong> to recover 4 points every 2 years.</p>
+                    <span class="rule-tag tag-success">Recovery</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">02</div><h4>Probationary Licence</h4></div>
+                    <p>New drivers hold a <strong>permis probatoire</strong> with only 6 initial points. The 3-year period has stricter rules. Accompanying driving (conduite accompagnée) grants 2 bonus starting points.</p>
+                    <span class="rule-tag tag-warning">New Drivers</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">03</div><h4>Licence Invalidation</h4></div>
+                    <p>Reaching <strong>0 points</strong> automatically invalidates your licence. You must surrender it within 10 days, observe a 6-month minimum ban, then pass both theory and practical tests again.</p>
+                    <span class="rule-tag tag-danger">Zero Points</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rules-divider"></div>
+
+        <!-- FINES TABLE -->
+        <div class="rules-section" data-cat="fines">
+            <div class="rules-cat-title" data-aos>
+                <div class="rct-icon">💶</div>
+                <div class="rct-text">
+                    <h3>Fines &amp; Penalties</h3>
+                    <span>Amendes et sanctions — Tableau des infractions</span>
+                </div>
+            </div>
+
+            <div class="fine-table-wrap" data-aos data-aos-delay="80">
+                <table class="fine-table">
+                    <thead>
+                        <tr>
+                            <th>Offence</th>
+                            <th>Fine</th>
+                            <th>Points Lost</th>
+                            <th>Other Sanctions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Speeding 1–19 km/h over limit</td><td>€68 – €135</td><td><span class="fine-badge blue">−1 pt</span></td><td>—</td></tr>
+                        <tr><td>Speeding 20–29 km/h over limit</td><td>€135</td><td><span class="fine-badge orange">−3 pts</span></td><td>Possible suspension</td></tr>
+                        <tr><td>Speeding 30–39 km/h over limit</td><td>€135</td><td><span class="fine-badge orange">−4 pts</span></td><td>3-year licence suspension</td></tr>
+                        <tr><td>Speeding 40–49 km/h over limit</td><td>€1,500</td><td><span class="fine-badge red">−6 pts</span></td><td>Suspension, vehicle seizure</td></tr>
+                        <tr><td>Speeding 50+ km/h over limit</td><td>€3,750</td><td><span class="fine-badge red">−6 pts</span></td><td>Immediate suspension, up to 3 months prison</td></tr>
+                        <tr><td>Running a red light</td><td>€135</td><td><span class="fine-badge red">−4 pts</span></td><td>Possible suspension</td></tr>
+                        <tr><td>Not wearing seatbelt</td><td>€135</td><td><span class="fine-badge orange">−3 pts</span></td><td>—</td></tr>
+                        <tr><td>Using mobile phone while driving</td><td>€135</td><td><span class="fine-badge red">−6 pts</span></td><td>Possible suspension</td></tr>
+                        <tr><td>BAC 0.5–0.79 g/L (alcohol)</td><td>€135</td><td><span class="fine-badge red">−6 pts</span></td><td>Suspension up to 3 years</td></tr>
+                        <tr><td>BAC ≥ 0.8 g/L (criminal)</td><td>€4,500</td><td><span class="fine-badge red">−6 pts</span></td><td>Up to 2 years prison, vehicle confiscation</td></tr>
+                        <tr><td>Driving under drug influence</td><td>€4,500</td><td><span class="fine-badge red">−6 pts</span></td><td>Up to 3 years prison, full licence ban</td></tr>
+                        <tr><td>No priority at pedestrian crossing</td><td>€135</td><td><span class="fine-badge red">−6 pts</span></td><td>Possible suspension</td></tr>
+                        <tr><td>Parking in disabled space illegally</td><td>€135</td><td><span class="fine-badge blue">0 pts</span></td><td>Vehicle may be towed</td></tr>
+                        <tr><td>No Crit'Air vignette in ZFE zone</td><td>€68 (car) / €450 (HGV)</td><td><span class="fine-badge blue">0 pts</span></td><td>—</td></tr>
+                        <tr><td>Radar detector in vehicle</td><td>€1,500</td><td><span class="fine-badge red">−6 pts</span></td><td>Device confiscated, suspension possible</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="rules-divider"></div>
+
+        <!-- OTHER IMPORTANT RULES -->
+        <div class="rules-section" data-cat="all">
+            <div class="rules-cat-title" data-aos>
+                <div class="rct-icon">📋</div>
+                <div class="rct-text">
+                    <h3>Other Important Rules</h3>
+                    <span>Autres règles essentielles de conduite</span>
+                </div>
+            </div>
+
+            <div class="rules-grid" data-aos data-aos-delay="80">
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">01</div><h4>Mobile Phone Use</h4></div>
+                    <p>Holding a phone while driving is illegal — even at a red light. Hands-free kits are permitted. Earphones covering <strong>both ears</strong> are prohibited. GPS on a phone mount is allowed but must not be touched while moving.</p>
+                    <span class="rule-tag tag-danger">€135 Fine | −6 pts</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">02</div><h4>Headlights &amp; Visibility</h4></div>
+                    <p>Dipped headlights must be used in tunnels, poor visibility, and between sunset and sunrise. Hazard lights must be used when stopped in a breakdown or emergency situation.</p>
+                    <span class="rule-tag tag-info">Lighting Rules</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">03</div><h4>Overtaking Rules</h4></div>
+                    <p>Never overtake at pedestrian crossings, junctions, bends, or hill crests. Always use indicators. Return to the right lane after passing. Overtaking on the right is forbidden except in slow-moving queues.</p>
+                    <span class="rule-tag tag-warning">Overtaking</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">04</div><h4>Motorway Rules</h4></div>
+                    <p>Keep right unless overtaking. Minimum speed in the left lane is 80 km/h in good conditions. Stopping on motorways is forbidden except in emergencies — use emergency bays only.</p>
+                    <span class="rule-tag tag-info">Motorway</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">05</div><h4>Driving in Winter</h4></div>
+                    <p>From 1 November to 31 March, in 48 mountain departments, winter tyres or snow chains are <strong>mandatory</strong>. Applies to all vehicles including foreign-registered cars.</p>
+                    <span class="rule-tag tag-warning">Seasonal Rule</span>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-top"><div class="rule-num">06</div><h4>Towing &amp; Trailers</h4></div>
+                    <p>Towing speed limits are reduced: motorways 130 → 110 km/h (heavy trailers: 90 km/h), open roads 80 km/h. A certified towbar and working trailer lights and brakes are required.</p>
+                    <span class="rule-tag tag-info">Towing</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rules-divider"></div>
+
+        <!-- FAQ
+        <div class="rules-section" data-cat="all">
+            <div class="rules-cat-title" data-aos>
+                <div class="rct-icon">❓</div>
+                <div class="rct-text">
+                    <h3>Frequently Asked Questions</h3>
+                    <span>Questions fréquentes sur le code de la route</span>
+                </div>
+            </div>
+
+            <div class="faq-list" data-aos data-aos-delay="60">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Can I drive in France with a foreign licence?<span class="faq-arrow">▼</span></div>
+                    <div class="faq-a">EU and EEA licence holders can drive in France indefinitely with their national licence. Non-EU visitors can drive for up to 1 year with their home country licence if it is in French or accompanied by an official translation. After 1 year of French residency, you must exchange it for a French licence.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Is lane splitting legal for motorcycles in France?<span class="faq-arrow">▼</span></div>
+                    <div class="faq-a">France has been trialling "inter-file" riding since 2016. It is permitted on roads with at least 2 lanes in the same direction, at speeds under 50 km/h, when traffic is moving slowly or stopped. The motorcycle must not exceed 30 km/h above surrounding traffic speed.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">What happens if I get a speed camera fine as a tourist?<span class="faq-arrow">▼</span></div>
+                    <div class="faq-a">France has cross-border enforcement agreements with most EU countries. Fines are forwarded to your home country's enforcement authority. Non-payment can result in debt collection proceedings. Foreign vehicles can also be stopped and fines collected on-the-spot by French police.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Do I need an international driving permit (IDP) in France?<span class="faq-arrow">▼</span></div>
+                    <div class="faq-a">EU/EEA licence holders do not need an IDP. If you hold a licence from outside the EU/EEA (e.g., USA, Australia, Morocco), an International Driving Permit is strongly recommended alongside your national licence, and is required by most car rental companies in France.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Are electric scooters (trottinettes) regulated in France?<span class="faq-arrow">▼</span></div>
+                    <div class="faq-a">Yes. Electric scooters are limited to 25 km/h on public roads. They are banned on pavements and must use cycle lanes or roads. You must be at least 12 years old. Riding under the influence of alcohol carries the same penalties as for car drivers.</div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</section>
+
+<!-- CTA
+<section class="cta-band">
+    <div class="cta-band-glow"></div>
+    <div class="container">
+        <div class="cta-band-inner cta-band-split" data-aos="zoom-in">
+            <div class="cta-text-side">
+                <h2>Ready to Get Your License?</h2>
+                <p>Join thousands of confident drivers who started with Smart Permis.</p>
+                <a href="contact.html" class="btn-primary">
+                    Contact Us Today
+                    <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="cta-img-side">
+                <img src="Imgaes/taxi.png" alt="Smart Permis Taxi" class="cta-taxi-img">
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/947XXXXXXXX" target="_blank" class="whatsapp-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<!-- FOOTER -->
+<footer class="sp-footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-grid">
+                <div>
+                    <img src="output-onlinegiftools.gif" alt="Smart Permis" class="footer-logo-img">
+                    <p class="footer-brand-p">Driving Excellence Since 2021</p>
+                    <div class="footer-socials">
+                        <a href="#" class="fsoc"><img src="Imgaes/f1.png" alt="fb"></a>
+                        <a href="#" class="fsoc"><img src="Imgaes/I1.png" alt="ig"></a>
+                        <a href="#" class="fsoc"><img src="Imgaes/X1.png" alt="x"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="rules.html">Driving rules</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <ul>
+                        <li>Beginner Lessons</li>
+                        <li>Advanced Training</li>
+                        <li>License Test Prep</li>
+                        <li>Defensive Driving</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li>phone: +337 510 30 782</li>
+                        <li>42 Av. Aristide Briand,93150 Le Blanc-Mesnil, France</li>
+                        <li>Email: info@smartpermis.fr</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar">
+            <p>© 2026 Smart Permis. All Rights Reserved.</p>
+            <div class="footer-online"><span class="online-dot"></span> All systems operational</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ── HEADER SCROLL + MOBILE NAV ──
+(function(){
+    const header = document.getElementById('spHeader');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
+
+    const ham = document.getElementById('hamburger');
+    const nav = document.getElementById('mobileNav');
+    ham.addEventListener('click', () => {
+        ham.classList.toggle('open');
+        nav.classList.toggle('open');
+    });
+
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-aos]').forEach(el => {
+        el.style.transitionDelay = (el.dataset.aosDelay || 0) + 'ms';
+        obs.observe(el);
+    });
+})();
+
+// ── CATEGORY FILTER ──
+function filterRules(cat, btn) {
+    document.querySelectorAll('.rfb-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.rules-section').forEach(section => {
+        const sectionCat = section.dataset.cat;
+        const show = cat === 'all' || sectionCat === cat || sectionCat === 'all';
+        section.style.display = show ? '' : 'none';
+    });
+    document.querySelectorAll('.rules-divider').forEach(div => {
+        div.style.display = cat === 'all' ? '' : 'none';
+    });
+}
+
+// ── FAQ ACCORDION ──
+function toggleFaq(el) {
+    const item = el.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+}
+
+// ── POINTS BAR ANIMATION ──
+(function(){
+    const bars = document.querySelectorAll('.points-bar-fill');
+    const widths = [];
+    bars.forEach(b => { widths.push(b.style.width); b.style.width = '0'; });
+    const bObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if(e.isIntersecting){
+                bars.forEach((b, i) => { setTimeout(() => { b.style.width = widths[i]; }, i * 100); });
+                bObs.disconnect();
+            }
+        });
+    }, { threshold: 0.3 });
+    const track = document.querySelector('.points-track');
+    if(track) bObs.observe(track);
+})();
+</script>
+
+</body>
+</html>
