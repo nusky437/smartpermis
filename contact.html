@@ -2,42 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Smart Permis</title>
-    <link rel="stylesheet" href="style.css">
 
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ✅ SEO TITLE -->
+    <title>Best Driving School in Paris | Smart Permis</title>
 
-  <!-- ✅ TITLE (Very Important) -->
-  <title>Best Driving School in [Your City] | Smart Permis</title>
+    <!-- ✅ META DESCRIPTION -->
+    <meta name="description" content="Join the best driving school in Paris, France. Learn car driving with expert trainers at Smart Permis. Affordable fees and flexible timings.">
 
-  <!-- ✅ META DESCRIPTION -->
-  <meta name="description" content="Join the best driving school in [Your City]. Learn car driving with expert trainers. Affordable fees and flexible timings.">
+    <!-- ✅ KEYWORDS -->
+    <meta name="keywords" content="driving school Paris, car driving lessons France, driving classes Paris">
 
-  <!-- ✅ KEYWORDS (optional but ok) -->
-  <meta name="keywords" content="driving school, car driving classes, driving lessons, [Your City] driving school">
+    <!-- ✅ AUTHOR -->
+    <meta name="author" content="Smart Permis">
 
-  <!-- ✅ AUTHOR -->
-  <meta name="author" content="Smart Permis">
+    <!-- ✅ ROBOTS -->
+    <meta name="robots" content="index, follow">
 
-  <!-- ✅ ROBOTS -->
-  <meta name="robots" content="index, follow">
+    <!-- ✅ CANONICAL -->
+    <link rel="canonical" href="https://nusky437.github.io/smartpermis/">
 
-  <!-- ✅ FAVICON -->
-  <link rel="icon" href="favicon.ico">
+    <!-- ✅ FAVICON -->
+    <link rel="icon" href="favicon.ico">
 
-  <!-- ✅ OPEN GRAPH (Social Media SEO) -->
-  <meta property="og:title" content="Best Driving School in [Your City]">
-  <meta property="og:description" content="Learn driving from professionals. Book your class today!">
-  <meta property="og:image" content="https://yourdomain.com/preview.jpg">
-  <meta property="og:url" content="https://yourdomain.com">
+    <!-- ✅ CSS PRELOAD -->
+    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
 
-  <!-- ✅ TWITTER SEO -->
-  <meta name="twitter:card" content="summary_large_image">
+    <!-- ✅ OPEN GRAPH -->
+    <meta property="og:title" content="Best Driving School in Paris | Smart Permis">
+    <meta property="og:description" content="Learn driving from professionals. Book your class today!">
+    <meta property="og:image" content="https://nusky437.github.io/smartpermis/preview.jpg">
+    <meta property="og:url" content="https://nusky437.github.io/smartpermis/">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+<style>
+    /* --- Full Screen Loader Styling --- */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #faf9f9; /* Loader background color */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000; 
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
 
+    
+    .logo-wrapper {
+      position: relative;
+      width: 370px;
+      height: 220px;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .wheel-spin {
+      position: absolute;
+      border-radius: 50%;
+      animation: spin 0.5s linear infinite;
+      transform-origin: center center;
+    }
+
+    .wheel-rear {
+      width: 40px;
+      height: 40px;
+      left: 30%;
+      bottom: 45%;
+    }
+
+    .wheel-front {
+      width: 40px;
+      height: 40px;
+      right: 33%;
+      bottom: 45%;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(360deg); }
+      to   { transform: rotate(0deg); }
+    }
+
+    /* Loader maraiyum pothu use aagum */
+    .hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    /* Content styling (Sample) */
+    .content {
+      padding: 20px;
+      font-family: sans-serif;
+    }
+
+
+    
+  </style>
+
+
+  <div id="preloader">
+    <div class="logo-wrapper">
+      <img class="logo-img" src="Imgaes/logo.png" alt="Logo" />
+
+      <div class="wheel-spin wheel-rear">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="#111" stroke="#3a3a3a" stroke-width="2.5"/>
+          <circle cx="30" cy="30" r="19" fill="#1c1c1c" stroke="#555" stroke-width="1.5"/>
+          <line x1="30" y1="11" x2="30" y2="49" stroke="#666" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="11" y1="30" x2="49" y2="30" stroke="#666" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="16.8" y1="16.8" x2="43.2" y2="43.2" stroke="#555" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="43.2" y1="16.8" x2="16.8" y2="43.2" stroke="#555" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="30" cy="30" r="11" fill="#161616" stroke="#444" stroke-width="1"/>
+          <circle cx="30" cy="30" r="5" fill="#bb0000" stroke="#dd1100" stroke-width="1"/>
+          <circle cx="30" cy="30" r="2" fill="#ff4444"/>
+        </svg>
+      </div>
+
+      <div class="wheel-spin wheel-front">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="#111" stroke="#3a3a3a" stroke-width="2.5"/>
+          <circle cx="30" cy="30" r="19" fill="#1c1c1c" stroke="#555" stroke-width="1.5"/>
+          <line x1="30" y1="11" x2="30" y2="49" stroke="#666" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="11" y1="30" x2="49" y2="30" stroke="#666" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="16.8" y1="16.8" x2="43.2" y2="43.2" stroke="#555" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="43.2" y1="16.8" x2="16.8" y2="43.2" stroke="#555" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="30" cy="30" r="11" fill="#161616" stroke="#444" stroke-width="1"/>
+          <circle cx="30" cy="30" r="5" fill="#bb0000" stroke="#dd1100" stroke-width="1"/>
+          <circle cx="30" cy="30" r="2" fill="#ff4444"/>
+        </svg>
+      </div>
+    </div>
+    <p style="margin-top: 20px; font-family: sans-serif; letter-spacing: 3px;">LOADING...</p>
+  </div>
+
+  
+
+  <script>
+    window.addEventListener("load", function() {
+      const loader = document.getElementById("preloader");
+      
+      // Page full-ah load aanathum 1 second wait panni hide pannum
+      setTimeout(() => {
+        loader.classList.add("hidden");
+      }, 1000);
+    });
+  </script>
 <header class="sp-header" id="spHeader">
     <a href="index.html" class="sp-logo"><img src="output-onlinegiftools.gif" alt="Smart Permis"></a>
     <nav class="sp-nav">
@@ -89,13 +213,13 @@
             <div class="ctc-card" data-aos data-aos-delay="80">
                 <div class="ctc-icon">☎</div>
                 <h3>Call Us</h3>
-                <p>+123456789</p>
+                <p>+337 510 30 782</p>
                 <span>Mon – Fri, 8am – 6pm</span>
             </div>
             <div class="ctc-card red" data-aos data-aos-delay="150">
                 <div class="ctc-icon">📍</div>
                 <h3>Visit Us</h3>
-                <p>42 Av. Aristide Briand</p>
+                <p>42 Av. Aristide Briand,93150 Le Blanc-Mesnil, France</p>
                 <span>France</span>
             </div>
             <div class="ctc-card" data-aos data-aos-delay="220">
@@ -107,7 +231,7 @@
         </div>
 
         <!-- CONTACT FORM + SIDEBAR -->
-        <div class="contact-layout">
+        <!-- <div class="contact-layout">
             <div class="cf-box" data-aos="fade-right">
                 <div class="sec-label">Send a Message</div>
                 <h2 class="sec-h2">Get In Touch</h2>
@@ -132,7 +256,7 @@
                         <button type="submit" class="btn-cf-submit">Send Message</button>
                     </div>
                 </form>
-            </div>
+            </div> -->
 
             <div class="cf-side" data-aos="fade-left">
                 <div class="cf-side-panel">

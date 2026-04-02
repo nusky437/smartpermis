@@ -313,7 +313,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .sp-section { padding: 96px 0; }
 .sp-section.bg-off { background: var(--off); }
 .sp-section.bg-dark { background: var(--dark); }
-.sp-section.bg-dark2 { background: var(--dark2); }
+.sp-section.bg-dark2 { background: darkred; }
 
 .sec-label {
     font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase;
@@ -438,7 +438,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 /* ── STATS SECTION ── */
 .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .st-card {
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.3); border: 1px solid rgba(255,255,255,0.07);
     border-radius: var(--radius); padding: 30px 20px; text-align: center;
     transition: all 0.35s var(--ease); position: relative; overflow: hidden;
 }
@@ -598,14 +598,14 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .ph-bread span { color: var(--red); }
 .ph-content h1 { font-size: clamp(34px, 5vw, 66px); font-weight: 800; color: #fff; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 12px; }
 .ph-content p { font-size: 16px; color: rgba(255,255,255,0.42); }
-.ph-wave { position: absolute; bottom: -1px; left: 0; right: 0; height: 68px; background: var(--white); clip-path: polygon(0 55%, 100% 0%, 100% 100%, 0 100%); }
+.ph-wave { position: absolute; bottom: -50px; left: 0; right: 0; height: 68px; background: var(--white); clip-path: polygon(0 55%, 100% 0%, 100% 100%, 0 100%); }
 .ph-wave.bg-off { background: var(--off); }
 
 /* ── FOOTER ── */
 .sp-footer { background: var(--dark); color: #fff; }
 .footer-top { padding: 68px 0 52px; border-bottom: 1px solid rgba(255,255,255,0.07); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 44px; }
-.footer-logo-img { height: 44px; margin-bottom: 14px; display: block; }
+.footer-logo-img { height: 80px; margin-bottom: 14px; display: block; }
 .footer-brand-p { font-size: 13px; color: rgba(255,255,255,0.32); margin-bottom: 22px; }
 .footer-socials { display: flex; gap: 10px; }
 .fsoc {
@@ -684,7 +684,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     .gallery-bento { grid-template-columns: 1fr; }
     .gal-item { height: 200px; }
     .stats-row { grid-template-columns: 1fr 1fr; }
-    .footer-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; row-gap: 24px; }
+    .footer-grid > div:first-child,
+    .footer-grid > div:last-child { grid-column: 1 / -1; }
+    .footer-grid .footer-col { justify-self: stretch; }
+    .footer-grid > div:last-child { text-align: center; }
+    .footer-grid > div:last-child ul { align-items: center; }
     .footer-bar { flex-direction: column; gap: 8px; }
     .sec-h2 { font-size: 26px; }
     .hero-glass-card { padding: 26px 18px; }
@@ -982,7 +987,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     .hero-h1 { font-size: 30px; letter-spacing: -0.8px; }
     .hero-eyebrow { font-size: 10px; padding: 5px 12px; }
     .hero-p { font-size: 13px; }
-    .hero-glass-card { padding: 20px 14px; border-radius: 16px; }
+    .hero-glass-card { padding: 50px 90px; border-radius: 16px; }
     .hgc-title { font-size: 18px; }
     .hgc-sub { font-size: 12px; margin-bottom: 20px; }
     .hgc-field input { padding: 11px 13px; font-size: 13px; }
@@ -1073,9 +1078,14 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     .map-wrap iframe { height: 280px; }
 
     /* Footer */
-    .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 28px; }
+    .footer-grid > div:first-child,
+    .footer-grid > div:last-child { grid-column: 1 / -1; }
+    .footer-grid .footer-col { justify-self: stretch; }
+    .footer-grid > div:last-child { text-align: center; }
+    .footer-grid > div:last-child ul { align-items: center; }
     .footer-top { padding: 40px 0 32px; }
-    .footer-logo-img { height: 36px; }
+    .footer-logo-img { height: 85px; }
     .footer-brand-p { font-size: 12px; }
     .fsoc { width: 32px; height: 32px; border-radius: 8px; }
     .fsoc img { width: 13px; height: 13px; }
